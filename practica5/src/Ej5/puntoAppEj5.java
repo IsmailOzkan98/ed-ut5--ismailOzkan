@@ -1,21 +1,24 @@
 package Ej5;
 
+import java.util.Random;
+import java.util.Scanner;
+
 public class puntoAppEj5 {
     public static void main(String[] args) {
-        puntoEj5 punto = new puntoEj5(2,1);
-        puntoEj5 puntoTest = new puntoEj5(79, 23);
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
 
 
-        punto.muestra();
-        punto.desplaza(3,7);
-        punto.muestra();
-        punto.desplazaX(4);
-        punto.muestra();
-        punto.desplazaY(2);
-        punto.muestra();
 
-        System.out.println("distancia entre puntos es de: " + punto.distanciaEuclidea(puntoTest));
-        punto.muestra();
+        System.out.print("Introduce cantidad de puntos deseados: ");
+        int cantidad = scanner.nextInt();
+
+        puntoEj5[] puntos;
+        puntos = new puntoEj5[cantidad];
+
+        for (int i = 0; i < puntos.length-1 ; i++ ) {
+            puntos[i] = new puntoEj5(random.nextInt(11), random.nextInt(11));
+            puntos[i].muestra();
+        }
     }
-
 }
