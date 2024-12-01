@@ -31,7 +31,7 @@ public class puntoEj5 {
     }
     //muestra posicion actual del punto
     public void muestra() {
-        System.out.println("Punto se encuentra en /coord X = " + x + " /coord Y = " + y);
+        System.out.println("La coordenada se situa en /coord X = " + x + " /coord Y = " + y);
     }
 
 }
